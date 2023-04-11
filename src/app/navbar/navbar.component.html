@@ -1,0 +1,30 @@
+<mat-toolbar class="mat-elevation-z8">
+  <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+      <mat-icon *ngIf="!sidenav.opened">
+          menu
+      </mat-icon>
+      <mat-icon *ngIf="sidenav.opened">
+          close
+      </mat-icon>
+  </button>
+  Interview Questions
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+    <button [routerLink]="'/csharp'" mat-button class="menu-button">
+        <span>C#</span>
+    </button>
+    <button [routerLink]="'/dotnetcore'" mat-button class="menu-button">
+        <span>.Net Core</span>
+    </button>
+    <button [routerLink]="'/angular'" mat-button class="menu-button">
+        <span>Angular</span>
+    </button>
+</mat-sidenav>
+  <mat-sidenav-content>
+      <div class="mat-elevation-z8">
+        <router-outlet></router-outlet>
+      </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

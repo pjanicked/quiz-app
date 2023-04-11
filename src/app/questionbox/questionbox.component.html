@@ -1,0 +1,12 @@
+<div class="container">
+  <p style="font-weight:bold;"> Q. {{question.title}} </p>
+  <div *ngIf="question.code">
+    <pre>
+      <code [innerHTML]="question.code"></code>
+    </pre>
+  </div>
+  <p> <u>Ans</u> - {{question.answer}} </p>
+  <div *ngIf="question.explanation">
+    <p> <u>Explanation</u> - {{question.explanation}} </p>
+  </div>
+</div>
