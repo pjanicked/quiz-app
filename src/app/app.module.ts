@@ -1,3 +1,5 @@
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularngComponent } from './angularng/angularng.component';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +16,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NgModule } from '@angular/core';
 import { QuestionboxComponent } from './questionbox/questionbox.component';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [					
@@ -34,6 +37,8 @@ import { QuestionboxComponent } from './questionbox/questionbox.component';
     MatListModule,
     MatIconModule,
     MatButtonModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

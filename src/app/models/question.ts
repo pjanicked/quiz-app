@@ -1,6 +1,7 @@
 export interface Question {
-    title: string;
-    answer: string;
+    key: string;
+    title?: string;
+    answer?: string;
     explanation?: string;
     code?: string;
 }
