@@ -9,8 +9,15 @@ export class DataService {
 
   constructor(private firestore: AngularFirestore) { }
 
-  getAllCsharp() {
+  getCsharpData() {
     return this.firestore.collection("test").snapshotChanges();
   }
 
+  getDotnetcoreData() {
+    return this.firestore.collection("dotnetcore").snapshotChanges();
+  }
+
+  getAngularData() {
+    return this.firestore.collection("angular").snapshotChanges();
+  }
 }

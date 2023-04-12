@@ -19,7 +19,7 @@ export class CsharpComponent implements OnInit {
   }
 
   retrieveCsharpData() {
-    this.dataService.getAllCsharp().pipe(
+    this.dataService.getCsharpData().pipe(
       map(changes =>
         changes.map(context =>
           (context.payload.doc.data() )

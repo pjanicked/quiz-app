@@ -1,3 +1,7 @@
-<p>
-  angularng works!
-</p>
+<h2 style="text-align: center;">Angular Interview Questions</h2>
+<ng-container *ngFor="let item of data">
+    <div class="question-content">
+      <app-questionbox [question]="item"></app-questionbox>
+    </div>  
+    <hr>
+</ng-container>

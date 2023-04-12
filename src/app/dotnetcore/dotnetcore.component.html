@@ -1,3 +1,7 @@
-<div style="padding: 100px;">
-  dotnetcore works!
-</div>
+<h2 style="text-align: center;">.Net Core Interview Questions</h2>
+<ng-container *ngFor="let item of data">
+    <div class="question-content">
+      <app-questionbox [question]="item"></app-questionbox>
+    </div>  
+    <hr>
+</ng-container>
