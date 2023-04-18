@@ -1,11 +1,16 @@
 <div class="container">
   <p style="font-weight:bold;"> Q. {{question.title}} </p>
   <div *ngIf="question.code">
-    <pre>
+    <pre> 
       <code [innerHTML]="question.code"></code>
     </pre>
   </div>
   <p> <u>Ans</u> - {{question.answer}} </p>
+  <ng-container *ngIf="question.points">
+    <ul *ngFor="let item of question.points.split(',')">
+      <li> {{item}} </li>
+    </ul>
+  </ng-container>
   <div *ngIf="question.explanation">
     <p> <u>Explanation</u> - {{question.explanation}} </p>
   </div>

@@ -8,7 +8,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CsharpComponent } from './csharp/csharp.component';
 import { DotnetcoreComponent } from './dotnetcore/dotnetcore.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { HomeComponent } from './home/home.component';
 import { MatButtonModule } from '@angular/material/button';
+import {MatExpansionModule} from '@angular/material/expansion'
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -19,13 +21,14 @@ import { QuestionboxComponent } from './questionbox/questionbox.component';
 import { environment } from 'src/environments/environment';
 
 @NgModule({
-  declarations: [					
+  declarations: [						
     AppComponent,
     NavbarComponent,
     CsharpComponent,
     DotnetcoreComponent,
     AngularngComponent,
-    QuestionboxComponent
+    QuestionboxComponent,
+    HomeComponent
    ],
   imports: [
     BrowserModule,
@@ -37,6 +40,7 @@ import { environment } from 'src/environments/environment';
     MatListModule,
     MatIconModule,
     MatButtonModule,
+    MatExpansionModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule
   ],

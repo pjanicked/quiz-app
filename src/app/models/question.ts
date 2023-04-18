@@ -4,4 +4,5 @@ export interface Question {
     answer?: string;
     explanation?: string;
     code?: string;
+    points?: string;
 }
