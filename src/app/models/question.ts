@@ -5,4 +5,6 @@ export interface Question {
     explanation?: string;
     code?: string;
     points?: string;
+    rank?: number;
+    options?: string;
 }

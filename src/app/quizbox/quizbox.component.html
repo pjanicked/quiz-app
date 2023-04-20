@@ -1,0 +1,24 @@
+<div class="container">
+  <p style="font-weight:bold;"> Q. {{question.title}} </p>
+  <div *ngIf="question.code">
+    <pre> 
+      <code [innerHTML]="question.code"></code>
+    </pre>
+  </div>
+
+  <ng-container *ngIf="question.options" else #onlyAnswer>
+    <ul *ngFor="let item of question.options.split(',')">
+      <li> {{item}} </li>
+    </ul>
+
+    <p> <u>Ans</u> - {{question.answer}} </p>
+    <div *ngIf="question.explanation">
+      <p> <u>Explanation</u> - {{question.explanation}} </p>
+    </div>
+  </ng-container>
+
+  <ng-template #onlyAnswer>
+    <p> <u>Ans</u> - {{question.answer}} </p>
+  </ng-template>
+
+</div>

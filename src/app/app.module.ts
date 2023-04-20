@@ -5,9 +5,11 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
+import { CodingmcqComponent } from './codingmcq/codingmcq.component';
 import { CsharpComponent } from './csharp/csharp.component';
 import { DotnetcoreComponent } from './dotnetcore/dotnetcore.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { GeneralComponent } from './general/general.component';
 import { HomeComponent } from './home/home.component';
 import { MatButtonModule } from '@angular/material/button';
 import {MatExpansionModule} from '@angular/material/expansion'
@@ -18,17 +20,21 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NgModule } from '@angular/core';
 import { QuestionboxComponent } from './questionbox/questionbox.component';
+import { QuizboxComponent } from './quizbox/quizbox.component';
 import { environment } from 'src/environments/environment';
 
 @NgModule({
-  declarations: [						
+  declarations: [									
     AppComponent,
     NavbarComponent,
     CsharpComponent,
     DotnetcoreComponent,
     AngularngComponent,
     QuestionboxComponent,
-    HomeComponent
+    HomeComponent,
+    GeneralComponent,
+    QuizboxComponent,
+    CodingmcqComponent
    ],
   imports: [
     BrowserModule,
