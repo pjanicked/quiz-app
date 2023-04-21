@@ -19,7 +19,7 @@ export class CodingmcqComponent implements OnInit {
   }
 
   retrieveMcqData() {
-    this.dataService.getCsharpData().pipe(
+    this.dataService.getCodingmcqData().pipe(
       map(changes =>
         changes.map(context =>
           (context.payload.doc.data() )

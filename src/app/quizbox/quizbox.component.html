@@ -11,10 +11,21 @@
       <li> {{item}} </li>
     </ul>
 
-    <p> <u>Ans</u> - {{question.answer}} </p>
-    <div *ngIf="question.explanation">
-      <p> <u>Explanation</u> - {{question.explanation}} </p>
-    </div>
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Answer
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <p> <u>Ans</u> - {{question.answer}} </p>
+        <div *ngIf="question.explanation">
+          <p> <u>Explanation</u> - {{question.explanation}} </p>
+        </div>
+       
+      </mat-expansion-panel>
+    </mat-accordion>
   </ng-container>
 
   <ng-template #onlyAnswer>

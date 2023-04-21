@@ -20,4 +20,8 @@ export class DataService {
   getAngularData() {
     return this.firestore.collection("angular", ref => ref.orderBy('rank')).snapshotChanges();
   }
+
+  getCodingmcqData() {
+    return this.firestore.collection("quiz", ref => ref.orderBy('rank')).snapshotChanges();
+  }
 }
